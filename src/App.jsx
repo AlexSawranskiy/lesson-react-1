@@ -1,18 +1,11 @@
 import painting from './painting.json';
-import { GalleryItem } from './components/GalleryItem/Gallery';
+import { GalleryList } from './components/GalleryList';
 
-const item = painting[0];
 
 export const App = () => {
   return (
      <>
-      <GalleryItem 
-      itemUrl={item.url}
-      title={item.title}
-      author={item.author.url}
-      price={item.price}
-      quantity={item.quantity}
-      tag={item.author.tag}/>
+      <GalleryList items={painting}/>
      </>
     )
 }
